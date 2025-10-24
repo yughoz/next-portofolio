@@ -1,30 +1,32 @@
 import { getPortfolioData } from '@/lib/portfolio'
-import ProfileSection from '@/components/sections/ProfileSection'
-import EducationSection from '@/components/sections/EducationSection'
-import PortfolioSection from '@/components/sections/PortfolioSection'
-import SkillsSection from '@/components/sections/SkillsSection'
-import ExperienceSection from '@/components/sections/ExperienceSection'
-import CertificationsSection from '@/components/sections/CertificationsSection'
+import { ThemeProvider } from '@/contexts/ThemeContext'
+import { TemplateProvider } from '@/contexts/TemplateContext'
+import TemplateSwitcher from '@/components/TemplateSwitcher'
+import TemplateRenderer from '@/components/TemplateRenderer'
 
 export default async function Home() {
   const data = await getPortfolioData()
+  const themeIndex = data.theme ? data.theme - 1 : 0
+  const templateType = data.template || 'default'
+
+  // Extract portfolio data
+  const portfolioData = {
+    profile: data.profile,
+    education: data.education,
+    portfolio: data.portfolio,
+    experience: data.experience,
+    certifications: data.certifications,
+    skills: data.skills
+  }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-      <ProfileSection profile={data.profile} />
-      <EducationSection education={data.education} />
-      <SkillsSection skills={data.skills} />
-      <PortfolioSection projects={data.portfolio} />
-      <ExperienceSection experience={data.experience} />
-      <CertificationsSection certifications={data.certifications} />
-
-      <footer className="py-8 px-4 bg-gray-900/50 border-t border-gray-800">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-400">
-            © {new Date().getFullYear()} {data.profile.name}. Built with Next.js, Tailwind CSS & Framer Motion.
-          </p>
-        </div>
-      </footer>
-    </main>
+    <ThemeProvider initialThemeIndex={themeIndex}>
+      <TemplateProvider initialTemplate={templateType}>
+        <main className="min-h-screen relative">
+          <TemplateSwitcher />
+          <TemplateRenderer portfolioData={portfolioData} />
+        </main>
+      </TemplateProvider>
+    </ThemeProvider>
   )
 }

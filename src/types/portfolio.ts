@@ -50,6 +50,26 @@ export interface Certification {
   link: string
 }
 
+export interface Theme {
+  id: string
+  name: string
+  colors: {
+    primary: string
+    secondary: string
+    accent: string
+    background: string
+    surface: string
+    text: string
+    textSecondary: string
+    gradient: string
+  }
+  gradients: {
+    hero: string
+    card: string
+    button: string
+  }
+}
+
 export interface PortfolioData {
   profile: Profile
   education: Education[]
@@ -57,4 +77,6 @@ export interface PortfolioData {
   skills: string[]
   experience: Experience[]
   certifications: Certification[]
+  theme?: number
+  template?: 'default' | 'anime' | 'cat'
 }
