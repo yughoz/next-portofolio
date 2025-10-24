@@ -1,0 +1,92 @@
+{
+  "profile": {
+    "name": "Alvian Yusuf",
+    "position": "Frontend Developer",
+    "description": "A Frontend Developer focusing on building modern, responsive, and user-friendly web applications with experience in JavaScript and React-based ecosystems.",
+    "contact": {
+      "email": "alvian.yusuf@example.com",
+      "phone": "+62 812-3456-7890",
+      "linkedin": "https://www.linkedin.com/in/alvianyusuf",
+      "github": "https://github.com/alvianyusuf",
+      "website": "https://alvianyusuf.dev",
+      "instagram": "https://www.instagram.com/synthvalkyrie/"
+    }
+  },
+  "education": [
+    {
+      "institution": "Bandung Institute of Technology",
+      "major": "Computer Science",
+      "degree": "Bachelor of Computer Science",
+      "start_year": 2018,
+      "end_year": 2022,
+      "description": "Actively participated in web development projects and served as an assistant for web programming courses."
+    }
+  ],
+  "portfolio": [
+    {
+      "title": "TaskFlow - Task Management System",
+      "description": "A collaborative task and project management web app featuring drag-and-drop functionality and API integration.",
+      "technologies": ["React", "Node.js", "MongoDB", "TailwindCSS"],
+      "demo_link": "https://taskflow-demo.vercel.app",
+      "github_link": "https://github.com/alvianyusuf/taskflow",
+      "year": 2024
+    },
+    {
+      "title": "Personal Portfolio Website",
+      "description": "An interactive personal portfolio showcasing projects, work experience, and technical skills in a minimalist design.",
+      "technologies": ["Next.js", "Framer Motion", "TailwindCSS"],
+      "demo_link": "https://alvianyusuf.dev",
+      "github_link": "https://github.com/alvianyusuf/portfolio",
+      "year": 2023
+    },
+    {
+      "title": "Sales Analytics Dashboard",
+      "description": "An interactive dashboard for monitoring real-time sales performance with visual charts and analytics.",
+      "technologies": ["Vue.js", "Chart.js", "Firebase"],
+      "demo_link": "https://salesdash-demo.netlify.app",
+      "github_link": "https://github.com/alvianyusuf/sales-dashboard",
+      "year": 2022
+    }
+  ],
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "TailwindCSS",
+    "Git",
+    "REST API"
+  ],
+  "experience": [
+    {
+      "company": "TechNova Solutions",
+      "position": "Frontend Developer",
+      "start_year": 2022,
+      "end_year": 2024,
+      "description": "Developed and maintained user interfaces for various client web applications, collaborating with backend teams for API integration."
+    },
+    {
+      "company": "Inovasi Digital Studio",
+      "position": "Web Developer Intern",
+      "start_year": 2021,
+      "end_year": 2022,
+      "description": "Built website prototypes and fixed bugs for internal projects using JavaScript and Bootstrap."
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Front-End Web Development",
+      "issuer": "Dicoding Indonesia",
+      "year": 2023,
+      "link": "https://www.dicoding.com/certificates/1234ABCDE"
+    },
+    {
+      "name": "JavaScript Algorithms and Data Structures",
+      "issuer": "freeCodeCamp",
+      "year": 2022,
+      "link": "https://www.freecodecamp.org/certification/alvianyusuf/javascript-algorithms"
+    }
+  ]
+}
