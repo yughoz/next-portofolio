@@ -72,9 +72,21 @@ The portfolio content is managed through `/public/data/portfolio.json` with the 
   "portfolio": [...],
   "skills": [...],
   "experience": [...],
-  "certifications": [...]
+  "certifications": [...],
+  "template": "anime"
 }
 ```
+
+### Template Options
+
+The `template` field allows you to choose from different visual themes. Available templates:
+
+- **`"anime"`** - Kawaii anime aesthetics with pink/purple gradients, emojis, and sparkles ✨
+- **`"anime2"`** - Dark modern anime style with red/black colors and tech-inspired elements 🌙
+- **`"cat"`** - Whimsical neko theme with pastel colors and cat animations 🐱
+- **`"default"`** - Clean professional design with teal/gray colors and modern styling 💼
+
+**Note**: If no template is specified, the `"anime"` template will be used as default.
 
 ## 🚀 Getting Started
 
@@ -121,9 +133,37 @@ The main accent color is teal (`#14b8a6`). To change it:
 
 ### Vercel (Recommended)
 
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically
+**Deploy via Vercel Dashboard:**
+1. Push your code to GitHub repository
+2. Go to [vercel.com](https://vercel.com) and sign in
+3. Click "Add New..." → "Project"
+4. Import your GitHub repository
+5. Vercel will auto-detect Next.js settings
+6. Click "Deploy" - your portfolio will be live in minutes!
+
+**Deploy via Vercel CLI:**
+```bash
+# Install Vercel CLI
+npm install -g vercel
+
+# Login to your Vercel account
+vercel login
+
+# Deploy from your project directory
+vercel
+
+# For production deployment
+vercel --prod
+```
+
+**Environment Variables (Optional):**
+- No environment variables required for basic functionality
+- Your portfolio will automatically use the data from `public/data/portfolio.json`
+
+**Custom Domain (Optional):**
+1. Go to your project settings in Vercel dashboard
+2. Click "Domains" → "Add"
+3. Enter your custom domain and follow DNS instructions
 
 ### Netlify
 
