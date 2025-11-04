@@ -266,26 +266,54 @@ export async function getTemplateConfig(): Promise<TemplateConfig> {
         }
 
         .template-cat h1, .template-cat h2, .template-cat h3 {
-          text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 107, 157, 0.3);
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 0 0 12px rgba(255, 107, 157, 0.2);
           letter-spacing: 0.02em;
         }
 
         .template-cat p, .template-cat span, .template-cat div {
-          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
 
         .template-cat .text-pink-200 {
-          color: var(--color-text-secondary) !important;
-          text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5) !important;
+          color: #FFD6E0 !important;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
         }
 
         .template-cat .text-pink-100 {
-          color: var(--color-text) !important;
-          text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5) !important;
+          color: #FFFFFF !important;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
         }
 
         .template-cat .text-yellow-400 {
+          color: #FFC75F !important;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        /* Improve readability for main description and paragraph text */
+        .template-cat .text-lg, .template-cat .text-xl {
+          color: #FFFFFF !important;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+          font-weight: 500 !important;
+        }
+
+        .template-cat .text-pink-100.leading-relaxed {
+          color: #FFFFFF !important;
           text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6) !important;
+          font-weight: 500 !important;
+        }
+
+        /* Improve footer text readability */
+        .template-cat footer .text-pink-200 {
+          color: #FFFFFF !important;
+          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7) !important;
+          font-weight: 600 !important;
+        }
+
+        .template-cat footer p {
+          color: #FFD6E0 !important;
+          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
+          font-weight: 600 !important;
+          font-size: 1.1rem !important;
         }
 
         .template-cat .section-title {

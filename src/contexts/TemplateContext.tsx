@@ -6,6 +6,7 @@ import { TemplateType, TemplateConfig } from '@/types/template'
 interface TemplateContextType {
   currentTemplate: TemplateType
   setTemplate: (template: TemplateType) => void
+  switchTemplate: (template: TemplateType, updateUrl?: boolean) => void
   templateConfig: TemplateConfig | null
   isLoading: boolean
 }
@@ -31,9 +32,17 @@ export function TemplateProvider({ children, initialTemplate = 'default' }: Temp
       const config = await getTemplateConfig()
       setTemplateConfig(config)
 
-      // Load template-specific CSS
+      // Load template-specific CSS with cache busting for development
       if (config.styles.css) {
-        const styleId = `template-${templateType}-styles`
+        const timestamp = process.env.NODE_ENV === 'development' ? Date.now() : ''
+        const styleId = `template-${templateType}-styles-${timestamp}`
+
+        // Remove old template styles in development
+        if (process.env.NODE_ENV === 'development') {
+          const oldStyles = document.querySelectorAll(`[id^="template-${templateType}-styles"]`)
+          oldStyles.forEach(style => style.remove())
+        }
+
         let styleElement = document.getElementById(styleId) as HTMLStyleElement
 
         if (!styleElement) {
@@ -70,9 +79,73 @@ export function TemplateProvider({ children, initialTemplate = 'default' }: Temp
     setTemplate(templateToLoad)
   }, [initialTemplate])
 
+  // Listen for URL changes and update template accordingly
+  useEffect(() => {
+    const handlePopState = () => {
+      const urlParams = new URLSearchParams(window.location.search)
+      const urlTemplate = urlParams.get('template') as TemplateType
+
+      if (urlTemplate && urlTemplate !== currentTemplate) {
+        setTemplate(urlTemplate)
+      }
+    }
+
+    window.addEventListener('popstate', handlePopState)
+
+    // Also listen for URL parameter changes (for navigation without page reload)
+    const originalPushState = history.pushState
+    const originalReplaceState = history.replaceState
+
+    const handleUrlChange = () => {
+      const urlParams = new URLSearchParams(window.location.search)
+      const urlTemplate = urlParams.get('template') as TemplateType
+
+      if (urlTemplate && urlTemplate !== currentTemplate) {
+        setTemplate(urlTemplate)
+      }
+    }
+
+    history.pushState = function(...args) {
+      originalPushState.apply(history, args)
+      setTimeout(handleUrlChange, 0)
+    }
+
+    history.replaceState = function(...args) {
+      originalReplaceState.apply(history, args)
+      setTimeout(handleUrlChange, 0)
+    }
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState)
+      history.pushState = originalPushState
+      history.replaceState = originalReplaceState
+    }
+  }, [currentTemplate])
+
+  // Template switching utility
+  const switchTemplate = (templateType: TemplateType, updateUrl = true) => {
+    setTemplate(templateType)
+
+    // Update URL parameter if requested
+    if (updateUrl) {
+      const url = new URL(window.location.href)
+      if (templateType !== 'default') {
+        url.searchParams.set('template', templateType)
+      } else {
+        url.searchParams.delete('template')
+      }
+
+      // Update URL without page reload
+      if (url.toString() !== window.location.href) {
+        history.replaceState({}, '', url.toString())
+      }
+    }
+  }
+
   const value = {
     currentTemplate,
     setTemplate,
+    switchTemplate,
     templateConfig,
     isLoading,
   }

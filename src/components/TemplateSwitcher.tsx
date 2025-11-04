@@ -34,13 +34,13 @@ const templateConfig = {
 }
 
 export default function TemplateSwitcher() {
-  const { currentTemplate, setTemplate, isLoading } = useTemplate()
+  const { currentTemplate, switchTemplate, isLoading } = useTemplate()
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleDropdown = () => setIsOpen(!isOpen)
 
   const selectTemplate = (template: TemplateType) => {
-    setTemplate(template)
+    switchTemplate(template, true) // Update URL when switching
     setIsOpen(false)
   }
 
