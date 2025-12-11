@@ -1,77 +1,96 @@
 {
   "profile": {
-    "name": "Alvian Yusuf",
-    "position": "Frontend Developer",
-    "description": "A Frontend Developer focusing on building modern, responsive, and user-friendly web applications with experience in JavaScript and React-based ecosystems.",
+    "name": "Alvian Yusuf Ghozali",
+    "position": "Nekoloper",
+    "description": "Turning human laziness into machine efficiency — one script, one automation, one nap at a time.",
     "contact": {
-      "email": "alvian.yusuf@example.com",
-      "phone": "+62 812-3456-7890",
-      "linkedin": "https://www.linkedin.com/in/alvianyusuf",
-      "github": "https://github.com/alvianyusuf",
-      "website": "https://alvianyusuf.dev",
-      "instagram": "https://www.instagram.com/synthvalkyrie/"
+      "email": "aeelsevenfold@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/yourprofile",
+      "github": "https://github.com/yughoz",
+      "website": "http://nekoding.xyz/",
+      "instagram": "http://instagram.com/yughozz"
     }
   },
   "education": [
     {
-      "institution": "Bandung Institute of Technology",
-      "major": "Computer Science",
-      "degree": "Bachelor of Computer Science",
-      "start_year": 2018,
-      "end_year": 2022,
-      "description": "Actively participated in web development projects and served as an assistant for web programming courses."
+      "institution": "CCIT - FT UI",
+      "major": "Teknik Informatika Perbankan Syariah",
+      "degree": "Professional (d2 level)",
+      "start_year": 2013,
+      "end_year": 2015,
+      "description": ""
+    },
+    {
+      "institution": "NIIT I-tech",
+      "major": "Teknik Informatika ",
+      "degree": "S1",
+      "start_year": 2015,
+      "end_year": 2019,
+      "description": ""
     }
   ],
   "portfolio": [
     {
-      "title": "TaskFlow - Task Management System",
-      "description": "A collaborative task and project management web app featuring drag-and-drop functionality and API integration.",
-      "technologies": ["React", "Node.js", "MongoDB", "TailwindCSS"],
-      "demo_link": "https://taskflow-demo.vercel.app",
-      "github_link": "https://github.com/alvianyusuf/taskflow",
-      "year": 2024
-    },
-    {
       "title": "Personal Portfolio Website",
       "description": "An interactive personal portfolio showcasing projects, work experience, and technical skills in a minimalist design.",
       "technologies": ["Next.js", "Framer Motion", "TailwindCSS"],
-      "demo_link": "https://alvianyusuf.dev",
-      "github_link": "https://github.com/alvianyusuf/portfolio",
-      "year": 2023
+      "demo_link": "http://nekoding.xyz/",
+      "github_link": "https://github.com/yughoz/next-portofolio"
     },
     {
-      "title": "Sales Analytics Dashboard",
-      "description": "An interactive dashboard for monitoring real-time sales performance with visual charts and analytics.",
-      "technologies": ["Vue.js", "Chart.js", "Firebase"],
-      "demo_link": "https://salesdash-demo.netlify.app",
-      "github_link": "https://github.com/alvianyusuf/sales-dashboard",
-      "year": 2022
+      "title": "Personal Portfolio Website (Anime Template)",
+      "description": "An interactive personal portfolio showcasing projects, work experience, and technical skills in a minimalist design.",
+      "technologies": ["Next.js", "Framer Motion", "TailwindCSS"],
+      "demo_link": "http://nekoding.xyz/",
+      "github_link": "https://github.com/yughoz/next-portofolio"
+    },
+    {
+      "title": "Personal Portfolio Website (Neko Template)",
+      "description": "An interactive personal portfolio showcasing projects, work experience, and technical skills in a minimalist design.",
+      "technologies": ["Next.js", "Framer Motion", "TailwindCSS"],
+      "demo_link": "http://nekoding.xyz/",
+      "github_link": "https://github.com/yughoz/next-portofolio"
+    },
+    {
+      "title": "Personal Portfolio Website (Anime2 Template)",
+      "description": "An interactive personal portfolio showcasing projects, work experience, and technical skills in a minimalist design.",
+      "technologies": ["Next.js", "Framer Motion", "TailwindCSS"],
+      "demo_link": "http://nekoding.xyz/",
+      "github_link": "https://github.com/yughoz/next-portofolio"
+    },
+    {
+      "title": "Nekolator",
+      "description": "A smart bill splitting calculator with basic and expert modes.",
+      "technologies": ["React", "TypeScript", "Supabase"],
+      "demo_link": "https://c.yuu.my.id/",
+      "github_link": "https://github.com/yughoz/bolt-nekolator"
     }
   ],
   "skills": [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "TailwindCSS",
-    "Git",
-    "REST API"
+    "Coding",
+    "Gamming",
+    "Prompting",
+    "Sleeping"
   ],
   "experience": [
     {
-      "company": "TechNova Solutions",
-      "position": "Frontend Developer",
-      "start_year": 2022,
-      "end_year": 2024,
-      "description": "Developed and maintained user interfaces for various client web applications, collaborating with backend teams for API integration."
+      "company": "PT Gravicode 2015",
+      "position": "Training (Magang)",
+      "start_year": 2015,
+      "end_year": 2015,
+      "description": "Training asp.net.\n Make a simple android application using xamarin"
     },
     {
-      "company": "Inovasi Digital Studio",
-      "position": "Web Developer Intern",
-      "start_year": 2021,
-      "end_year": 2022,
+      "company": "PT. Andalabs",
+      "position": "Full Stack Web Developer",
+      "start_year": 2015,
+      "end_year": 2018,
+      "description": "Built website prototypes and fixed bugs for internal projects using JavaScript and Bootstrap."
+    },
+    {
+      "company": "PT.Reinovasi",
+      "position": "Senior Programming",
+      "start_year": 2018,
       "description": "Built website prototypes and fixed bugs for internal projects using JavaScript and Bootstrap."
     }
   ],
