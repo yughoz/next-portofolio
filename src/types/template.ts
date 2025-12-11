@@ -27,7 +27,7 @@ export interface Template {
   }
 }
 
-export type TemplateType = 'default' | 'anime' | 'cat' | 'anime2'
+export type TemplateType = 'default' | 'anime' | 'cat' | 'anime2' | 'kurumi'
 
 export interface TemplateConfig {
   type: TemplateType

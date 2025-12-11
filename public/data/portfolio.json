@@ -33,35 +33,55 @@
     {
       "title": "Personal Portfolio Website",
       "description": "An interactive personal portfolio showcasing projects, work experience, and technical skills in a minimalist design.",
-      "technologies": ["Next.js", "Framer Motion", "TailwindCSS"],
+      "technologies": [
+        "Next.js",
+        "Framer Motion",
+        "TailwindCSS"
+      ],
       "demo_link": "http://nekoding.xyz/",
       "github_link": "https://github.com/yughoz/next-portofolio"
     },
     {
       "title": "Personal Portfolio Website (Anime Template)",
       "description": "An interactive personal portfolio showcasing projects, work experience, and technical skills in a minimalist design.",
-      "technologies": ["Next.js", "Framer Motion", "TailwindCSS"],
+      "technologies": [
+        "Next.js",
+        "Framer Motion",
+        "TailwindCSS"
+      ],
       "demo_link": "http://nekoding.xyz/",
       "github_link": "https://github.com/yughoz/next-portofolio"
     },
     {
       "title": "Personal Portfolio Website (Neko Template)",
       "description": "An interactive personal portfolio showcasing projects, work experience, and technical skills in a minimalist design.",
-      "technologies": ["Next.js", "Framer Motion", "TailwindCSS"],
+      "technologies": [
+        "Next.js",
+        "Framer Motion",
+        "TailwindCSS"
+      ],
       "demo_link": "http://nekoding.xyz/",
       "github_link": "https://github.com/yughoz/next-portofolio"
     },
     {
       "title": "Personal Portfolio Website (Anime2 Template)",
       "description": "An interactive personal portfolio showcasing projects, work experience, and technical skills in a minimalist design.",
-      "technologies": ["Next.js", "Framer Motion", "TailwindCSS"],
+      "technologies": [
+        "Next.js",
+        "Framer Motion",
+        "TailwindCSS"
+      ],
       "demo_link": "http://nekoding.xyz/",
       "github_link": "https://github.com/yughoz/next-portofolio"
     },
     {
       "title": "Nekolator",
       "description": "A smart bill splitting calculator with basic and expert modes.",
-      "technologies": ["React", "TypeScript", "Supabase"],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Supabase"
+      ],
       "demo_link": "https://c.yuu.my.id/",
       "github_link": "https://github.com/yughoz/bolt-nekolator"
     }
@@ -108,5 +128,5 @@
       "link": "https://www.freecodecamp.org/certification/alvianyusuf/javascript-algorithms"
     }
   ],
-  "template": "cat"
+  "template": "kurumi"
 }

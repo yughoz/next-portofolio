@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { Palette, Monitor, Sparkles, Cat, Flame } from 'lucide-react'
+import { Palette, Monitor, Sparkles, Cat, Flame, Clock } from 'lucide-react'
 import { useState } from 'react'
 import { useTemplate } from '@/contexts/TemplateContext'
 import { TemplateType } from '@/types/template'
@@ -30,6 +30,12 @@ const templateConfig = {
     description: 'Dark modern anime style',
     icon: Flame,
     color: 'from-red-600 to-black'
+  },
+  kurumi: {
+    name: 'Kurumi Theme',
+    description: 'Pixel art retro gaming style',
+    icon: Clock,
+    color: 'from-red-700 to-gray-900'
   }
 }
 
@@ -86,11 +92,10 @@ export default function TemplateSwitcher() {
                     <motion.button
                       key={key}
                       onClick={() => selectTemplate(key as TemplateType)}
-                      className={`w-full flex items-start gap-4 p-4 rounded-lg transition-all duration-200 mb-2 ${
-                        isActive
+                      className={`w-full flex items-start gap-4 p-4 rounded-lg transition-all duration-200 mb-2 ${isActive
                           ? 'bg-gray-700/50 border border-teal-500/30'
                           : 'hover:bg-gray-700/30 border border-transparent'
-                      }`}
+                        }`}
                       whileHover={{ x: 2 }}
                       whileTap={{ scale: 0.98 }}
                     >
