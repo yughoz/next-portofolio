@@ -1,0 +1,123 @@
+{
+  "profile": {
+    "name": "Your Name",
+    "position": "Your Position/Title",
+    "description": "A brief description about yourself, your skills, and what you're passionate about. Keep it concise but engaging - around 2-3 sentences.",
+    "contact": {
+      "email": "your.email@example.com",
+      "phone": "+1 234-567-8900",
+      "linkedin": "https://www.linkedin.com/in/yourprofile",
+      "github": "https://github.com/yourusername",
+      "website": "https://yourwebsite.com",
+      "instagram": "https://www.instagram.com/yourusername/"
+    }
+  },
+  "education": [
+    {
+      "institution": "University Name",
+      "major": "Your Major/Field of Study",
+      "degree": "Bachelor/Master of Science in Computer Science",
+      "start_year": 2018,
+      "end_year": 2022,
+      "description": "Brief description of your academic achievements, relevant coursework, or activities during your education."
+    },
+    {
+      "institution": "Another Institution",
+      "major": "Another Major",
+      "degree": "Associate Degree or Certification",
+      "start_year": 2016,
+      "end_year": 2018,
+      "description": "Additional educational background or certifications that are relevant to your career."
+    }
+  ],
+  "portfolio": [
+    {
+      "title": "Project Name",
+      "description": "A detailed description of what this project does, the problems it solves, and your role in its development. Highlight key features and technologies used.",
+      "technologies": ["React", "Node.js", "MongoDB", "TailwindCSS", "TypeScript"],
+      "demo_link": "https://your-project-demo.vercel.app",
+      "github_link": "https://github.com/yourusername/project-repo",
+      "year": 2024
+    },
+    {
+      "title": "Another Project",
+      "description": "Description of another significant project you've worked on. Focus on the impact and technical challenges you overcame.",
+      "technologies": ["Vue.js", "Firebase", "Chart.js", "CSS3"],
+      "demo_link": "https://another-demo.netlify.app",
+      "github_link": "https://github.com/yourusername/another-project",
+      "year": 2023
+    },
+    {
+      "title": "Side Project",
+      "description": "Personal project that showcases your skills and interests. Can be experimental or hobby-based.",
+      "technologies": ["Python", "FastAPI", "PostgreSQL", "Docker"],
+      "demo_link": "https://side-project-demo.herokuapp.com",
+      "github_link": "https://github.com/yourusername/side-project",
+      "year": 2022
+    }
+  ],
+  "skills": [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Vue.js",
+    "Node.js",
+    "Python",
+    "HTML5",
+    "CSS3",
+    "TailwindCSS",
+    "MongoDB",
+    "PostgreSQL",
+    "Git",
+    "REST API",
+    "GraphQL",
+    "Docker",
+    "AWS",
+    "Figma"
+  ],
+  "experience": [
+    {
+      "company": "Company Name",
+      "position": "Your Position/Role",
+      "start_year": 2022,
+      "end_year": 2024,
+      "description": "Describe your responsibilities, achievements, and impact at this company. Focus on quantifiable results and technologies you used."
+    },
+    {
+      "company": "Previous Company",
+      "position": "Previous Role",
+      "start_year": 2020,
+      "end_year": 2022,
+      "description": "Description of your previous work experience, highlighting skills developed and projects completed."
+    },
+    {
+      "company": "Internship Company",
+      "position": "Intern Role",
+      "start_year": 2019,
+      "end_year": 2020,
+      "description": "Brief description of your internship experience and what you learned."
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certification Name",
+      "issuer": "Issuing Organization",
+      "year": 2023,
+      "link": "https://example.com/certificate-link"
+    },
+    {
+      "name": "Another Certification",
+      "issuer": "Another Issuer",
+      "year": 2022,
+      "link": "https://example.com/another-certificate"
+    },
+    {
+      "name": "Professional Development",
+      "issuer": "Training Provider",
+      "year": 2021,
+      "link": "https://example.com/professional-certificate"
+    }
+  ],
+  "template": "anime"
+}

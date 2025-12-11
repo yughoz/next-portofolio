@@ -3,12 +3,15 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, Phone, Globe, Instagram, Twitter, Youtube, Facebook } from 'lucide-react'
 import { Profile } from '@/types/portfolio'
+import { useTheme } from '@/contexts/ThemeContext'
 
 interface ProfileSectionProps {
   profile: Profile
 }
 
 export default function ProfileSection({ profile }: ProfileSectionProps) {
+  const { theme } = useTheme()
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -39,8 +42,9 @@ export default function ProfileSection({ profile }: ProfileSectionProps) {
       href: `mailto:${profile.contact.email}`,
       icon: Mail,
       label: 'Email',
-      color: 'bg-teal-600 hover:bg-teal-700',
-      shadowColor: 'hover:shadow-teal-600/25',
+      color: '',
+      shadowColor: '',
+      isTheme: true,
     },
     {
       key: 'linkedin',
@@ -110,7 +114,12 @@ export default function ProfileSection({ profile }: ProfileSectionProps) {
   ]
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white px-4">
+    <section
+      className="min-h-screen flex items-center justify-center text-white px-4"
+      style={{
+        background: `linear-gradient(135deg, ${theme.colors.background}, ${theme.colors.surface}, ${theme.colors.background})`
+      }}
+    >
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -118,22 +127,33 @@ export default function ProfileSection({ profile }: ProfileSectionProps) {
         className="max-w-4xl w-full text-center"
       >
         <motion.div variants={itemVariants} className="mb-8">
-          <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full flex items-center justify-center">
+          <div
+            className="w-32 h-32 mx-auto mb-6 rounded-full flex items-center justify-center"
+            style={{
+              background: `linear-gradient(135deg, ${theme.colors.primary}, ${theme.colors.secondary})`
+            }}
+          >
             <span className="text-4xl font-bold text-white">
               {profile.name.split(' ').map(n => n[0]).join('')}
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 font-heading bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
+          <h1
+            className="text-5xl md:text-6xl font-bold mb-4 font-heading bg-clip-text text-transparent"
+            style={{
+              backgroundImage: `linear-gradient(135deg, ${theme.colors.primary}, ${theme.colors.secondary})`
+            }}
+          >
             {profile.name}
           </h1>
-          <h2 className="text-2xl md:text-3xl text-gray-300 mb-6 font-heading">
+          <h2 className="text-2xl md:text-3xl mb-6 font-heading" style={{ color: theme.colors.textSecondary }}>
             {profile.position}
           </h2>
         </motion.div>
 
         <motion.p
           variants={itemVariants}
-          className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed"
+          style={{ color: theme.colors.textSecondary }}
         >
           {profile.description}
         </motion.p>
@@ -148,6 +168,29 @@ export default function ProfileSection({ profile }: ProfileSectionProps) {
             .map((option) => {
               const Icon = option.icon
               const isExternal = option.key !== 'email' && option.key !== 'phone'
+
+              if (option.isTheme) {
+                return (
+                  <a
+                    key={option.key}
+                    href={option.href}
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                    style={{
+                      backgroundColor: theme.colors.primary,
+                      boxShadow: `0 4px 14px 0 ${theme.colors.primary}25`,
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = theme.colors.secondary
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = theme.colors.primary
+                    }}
+                  >
+                    <Icon size={20} />
+                    <span>{option.label}</span>
+                  </a>
+                )
+              }
 
               return (
                 <a
