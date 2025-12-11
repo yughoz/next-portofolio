@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  portfolio:
+  app:
     build:
       context: .
       dockerfile: Dockerfile
@@ -19,7 +19,7 @@ services:
       start_period: 40s
 
   # Development service (optional - use with docker-compose --profile dev up)
-  portfolio-dev:
+  app-dev:
     build:
       context: .
       dockerfile: Dockerfile.dev
