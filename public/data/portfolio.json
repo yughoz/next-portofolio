@@ -127,16 +127,10 @@
   ],
   "certifications": [
     {
-      "name": "Front-End Web Development",
+      "name": "Tidak ada",
       "issuer": "Dicoding Indonesia",
       "year": 2023,
-      "link": "https://www.dicoding.com/certificates/1234ABCDE"
-    },
-    {
-      "name": "JavaScript Algorithms and Data Structures",
-      "issuer": "freeCodeCamp",
-      "year": 2022,
-      "link": "https://www.freecodecamp.org/certification/alvianyusuf/javascript-algorithms"
+      "link": "$"
     }
   ],
   "template": "kurumi"
