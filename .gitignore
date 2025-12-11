@@ -46,5 +46,3 @@ next-env.d.ts
 Thumbs.db
 .DS_Store
 
-
-/public/data/portfolio.json
