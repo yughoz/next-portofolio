@@ -25,7 +25,7 @@ export function getCurrentTemplateFromUrl(): TemplateType | null {
   const urlParams = new URLSearchParams(window.location.search)
   const template = urlParams.get('template')
 
-  if (template && ['default', 'anime', 'cat', 'anime2'].includes(template)) {
+  if (template && ['default', 'anime', 'cat', 'anime2', 'kurumi'].includes(template)) {
     return template as TemplateType
   }
 
@@ -57,7 +57,8 @@ export const templateOptions = {
   default: 'Modern Developer',
   anime: 'Anime Theme',
   cat: 'Neko Theme',
-  anime2: 'Anime 2 Theme'
+  anime2: 'Anime 2 Theme',
+  kurumi: 'Kurumi Theme'
 } as const
 
 /**
@@ -70,7 +71,8 @@ export function getAllTemplateUrls(baseUrl?: string) {
     default: createTemplateUrl('default', baseUrl),
     anime: createTemplateUrl('anime', baseUrl),
     cat: createTemplateUrl('cat', baseUrl),
-    anime2: createTemplateUrl('anime2', baseUrl)
+    anime2: createTemplateUrl('anime2', baseUrl),
+    kurumi: createTemplateUrl('kurumi', baseUrl)
   }
 
   return urls
