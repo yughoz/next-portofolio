@@ -71,6 +71,17 @@
         "Framer Motion",
         "TailwindCSS"
       ],
+      "demo_link": "http://nekoding.xyz?template=kurumi",
+      "github_link": "https://github.com/yughoz/next-portofolio"
+    },
+    {
+      "title": "Personal Portfolio Website (Kurumi Template)",
+      "description": "An interactive personal portfolio showcasing projects, work experience, and technical skills in a minimalist design.",
+      "technologies": [
+        "Next.js",
+        "Framer Motion",
+        "TailwindCSS"
+      ],
       "demo_link": "http://nekoding.xyz/",
       "github_link": "https://github.com/yughoz/next-portofolio"
     },
@@ -105,13 +116,13 @@
       "position": "Full Stack Web Developer",
       "start_year": 2015,
       "end_year": 2018,
-      "description": "Built website prototypes and fixed bugs for internal projects using JavaScript and Bootstrap."
+      "description": "Ceate an engine to manage hundreds of thousands of data, create an API for vending machine data monitoring contents"
     },
     {
       "company": "PT.Reinovasi",
       "position": "Senior Programming",
       "start_year": 2018,
-      "description": "Built website prototypes and fixed bugs for internal projects using JavaScript and Bootstrap."
+      "description": "Built E-invoice for Pelindo."
     }
   ],
   "certifications": [
