@@ -5,38 +5,31 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "3005:3005"
     environment:
       - NODE_ENV=production
     restart: unless-stopped
+    networks:
+      - coolify
+
+    labels:
+      - coolify.managed=true
+      - coolify.proxy.enable=true
+      - coolify.proxy.port=3005
+      - coolify.proxy.domain=portos.nekoding.xyz
+      - coolify.proxy.ssl=true
+
     healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3005"]
+      test:
+        - CMD
+        - wget
+        - '--no-verbose'
+        - '--tries=1'
+        - '--spider'
+        - 'http://localhost:3005'
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 40s
-    networks:
-      - coolify
-
-  # Development service (optional - use with docker-compose --profile dev up)
-  app-dev:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    ports:
-      - "3005:3005"
-    environment:
-      - NODE_ENV=development
-    volumes:
-      - .:/app
-      - /app/node_modules
-      - /app/.next
-    profiles:
-      - dev
-    restart: unless-stopped
-    networks:
-      - coolify
 
 networks:
   coolify:
