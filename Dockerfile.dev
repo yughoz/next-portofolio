@@ -1,14 +1,15 @@
-FROM node:20-alpine
+FROM oven/bun:1
 
 WORKDIR /app
 
 # Install dependencies
-COPY package*.json ./
-RUN npm install
+# We copy only package.json and bun.lock for cache efficiency
+COPY package.json bun.lock ./
+RUN bun install
 
 # Copy source files
 COPY . .
 
 EXPOSE 3005
 
-CMD ["npm", "run", "dev"]
+CMD ["bun", "run", "dev", "-p", "3005"]
